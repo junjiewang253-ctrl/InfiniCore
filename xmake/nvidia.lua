@@ -172,7 +172,11 @@ target("infiniop-nvidia")
         end
     end
 
-    add_cuflags("-Xcompiler=-Wno-error=deprecated-declarations", "-Xcompiler=-Wno-error=unused-function")
+    add_cuflags(
+        "-Xcompiler=-Wno-error=deprecated-declarations",
+        "-Xcompiler=-Wno-error=unused-function",
+        "-Xcompiler=-Wno-error=attributes"
+    )
 
     -- Cutlass: enable I8 Gemm when CUTLASS_ROOT is set
     if CUTLASS_ROOT ~= nil then
