@@ -1,6 +1,13 @@
 #ifndef __QUICKGELU_CUDA_H__
 #define __QUICKGELU_CUDA_H__
 
+#include "../../../devices/nvidia/nvidia_kernel_common.cuh"
+#include <cmath>
+#include <cstddef>
+#include <type_traits>
+#include <cuda_bf16.h>
+#include <cuda_fp16.h>
+
 namespace op::quickgelu::cuda {
 
 typedef struct QuickGeluOp {
