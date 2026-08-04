@@ -1,6 +1,9 @@
 #ifndef __QUICKGELU_CUDA_H__
 #define __QUICKGELU_CUDA_H__
 
+#ifdef ENABLE_NVIDIA_API
+#include "../../../devices/nvidia/nvidia_common.cuh"
+#endif
 #include "../../../devices/nvidia/nvidia_kernel_common.cuh"
 #include <cmath>
 #include <cstddef>
