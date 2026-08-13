@@ -1,5 +1,25 @@
 # InfiniCore
 
+## 本 Fork 在 LLAISYS → InfiniLM PerfGuard 项目中的状态
+
+本 fork 的项目开发线为 `project/e0-baseline`，已封存实验使用的实现身份为：
+
+```text
+implementation: 2903120a816397750675801727228bc21c386e0c
+scope:          QuickGELU CUDA header/context/template build closure
+result:         E0 runtime/build/import/zero-device and downstream service qualification PASS_SCOPED
+```
+
+从 upstream 基线 `8fcf6040` 到该身份的项目改动只涉及 QuickGELU CUDA 头文件自包含、
+NVIDIA handle context、CUTLASS attribute warning 编译策略和模板实例化。该 commit 与
+InfiniLM `be0fed4d` 共同形成 E0/M9/M10 冻结 runtime 的源码身份。README 等
+纯文档后代不改变已封存的 implementation identity。
+
+完整任务书、实验 raw、seal、M9 四卡容量与 M10 InfiniLM/vLLM 对照保存在
+[`junjiewang253-ctrl/llaisys-infinilm-private`](https://github.com/junjiewang253-ctrl/llaisys-infinilm-private)
+的 `control/e0-goal-freeze-20260803` 分支。当前下一阶段是冻结单场景 M11 profiling，
+本 README 不表示已开始新的 GPU 实验或上游 PR。
+
 [![Doc](https://img.shields.io/badge/Document-ready-blue)](https://github.com/InfiniTensor/InfiniCore-Documentation)
 [![CI](https://github.com/InfiniTensor/InfiniCore/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/InfiniTensor/InfiniCore/actions)
 [![license](https://img.shields.io/github/license/InfiniTensor/InfiniCore)](https://mit-license.org/)
