@@ -17,8 +17,11 @@ InfiniLM `be0fed4d` 共同形成 E0/M9/M10 冻结 runtime 的源码身份。READ
 
 完整任务书、实验 raw、seal、M9 四卡容量与 M10 InfiniLM/vLLM 对照保存在
 [`junjiewang253-ctrl/llaisys-infinilm-private`](https://github.com/junjiewang253-ctrl/llaisys-infinilm-private)
-的 `control/e0-goal-freeze-20260803` 分支。当前下一阶段是冻结单场景 M11 profiling，
-本 README 不表示已开始新的 GPU 实验或上游 PR。
+的 `control/e0-goal-freeze-20260803` 分支。后续 M11–M13 已完成性能方向复现、
+CUDA Graph 修复和 InfiniLM 上游 PR #540；最终候选通过 TP1/TP2/TP4 × Graph OFF/ON
+6/6 PASS、72/72 token-exact。M13 current-upstream fresh build 另行固定使用 InfiniCore
+`57fd61e0d1864968c8377b784827f940af0b81e4`；这不改写本分支已经封存的
+`2903120a` E0/M9/M10 实现身份。PR #540 尚未合并，CI/Ruff 仍需 upstream action。
 
 [![Doc](https://img.shields.io/badge/Document-ready-blue)](https://github.com/InfiniTensor/InfiniCore-Documentation)
 [![CI](https://github.com/InfiniTensor/InfiniCore/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/InfiniTensor/InfiniCore/actions)
